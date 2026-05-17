@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "charts.fullname" . }}-config
+data:
+  APP_STORE: {{ .Values.env.APP_STORE | quote }}
+  APP_REDIS_URL: {{ .Values.env.APP_REDIS_URL | quote }}
+  APP_VERSION: {{ .Values.env.APP_VERSION | quote }}
